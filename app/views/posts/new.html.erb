@@ -1,0 +1,9 @@
+<h1>New post</h1>
+<%= form_with model: @post do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+  <%= form.submit %>
+  <%= form.hidden_field :user_id, value: current_user.id %>
+<% end %>
